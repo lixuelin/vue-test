@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="model">
+    <span id="val"></span>
+    <script>
+        let model = document.getElementById("model");
+        let val = document.getElementById("val");
+        let obj = {}
+        model.addEventListener("input", function(e) {
+            obj.name = e.target.value;
+        })
+        Object.defineProperty(obj, "name", {
+            get() {
+                return value
+            },
+            set(value) {
+                val.innerText = value
+            }
+        })
+    </script>
+</body>
+
+</html>
